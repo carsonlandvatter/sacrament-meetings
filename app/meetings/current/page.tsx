@@ -14,11 +14,7 @@ export default function CurrentMeeting() {
 
     const exact = meetings.find((m) => m.date === iso);
 
-    const mostRecent = meetings
-        .filter((m) => m.date <= iso)
-        .sort((a, b) => b.date.localeCompare(a.date))[0];
-
-    const meeting = exact ?? mostRecent;
+    const meeting = exact;
 
     if (meeting) {
         redirect(`/meetings/${meeting.id}`);
