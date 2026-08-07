@@ -15,8 +15,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Seaside Ward Sacrament Meetings",
-  description: "Sacrament meeting agendas for the Seaside Ward",
+  metadataBase: new URL('https://sacrament-meetings-ten-nu.vercel.app/'),
+  title: {
+    default: 'Seaside Ward Sacrament Meetings',
+    template: '%s | Seaside Ward'
+  },
+  description:
+    'Sacrament meeting agendas, speakers, hymns, and prayers for the Seaside Ward',
+  openGraph: {
+    title: 'Seaside Ward Sacrament Meetings',
+    description: 'Sacrament meeting agendas for the Seaside Ward',
+    type: 'website'
+  }
 };
 
 export default function RootLayout({

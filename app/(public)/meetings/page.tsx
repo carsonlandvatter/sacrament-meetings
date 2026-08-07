@@ -2,6 +2,13 @@ import { getMeetings, getMeetingsTotalPages } from '@/app/lib/meetings-db';
 import { MeetingSearch } from '@/app/components/MeetingSearch';
 import MeetingCard from '@/app/components/MeetingCard';
 import { Pagination } from '@/app/components/Pagination';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'All Meetings',
+  description:
+    'Brows and search sacrament meeting agendas for the Seaside Ward.'
+};
 
 export default async function MeetingsPage(props: {
   searchParams?: Promise<{ query?: string; page?: string }>;
